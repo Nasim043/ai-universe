@@ -1,7 +1,8 @@
 import React from 'react';
 
 const SingleData = (props) => {
-  const { id, image, features, name, published_in } = props.tool;
+  const { id, image, features, name, published_in } = props?.singleData;
+
   return (
     <div className="card card-compact w-full bg-base-100 shadow-2xl">
       <figure>
@@ -27,11 +28,11 @@ const SingleData = (props) => {
               <span>{published_in}</span>
             </div>
           </div>
-          <span className='bg-red-100 rounded-xl p-2'>
+          <label onClick={() => props.setUniqueId(id)} htmlFor="my-modal-5" className='bg-red-100 rounded-xl p-2 cursor-pointer'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FC2947" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
             </svg>
-          </span>
+          </label>
         </div>
 
       </div>

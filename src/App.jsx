@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <Button>sort by date</Button>
       <Card />
-      <Button>see more</Button>
     </>
   )
 }
